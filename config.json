@@ -1,3 +1,14 @@
 {
-    
+  "tube_light" : {
+    "pin" : 0
+  },
+  "fan" : {
+    "pin" : 0
+  },
+  "outside_light" : {
+    "pin" : 0
+  },
+  "door_lock" : {
+    "pin" : 0
+  }
 }
