@@ -9,6 +9,22 @@ fh.setFormatter(formatter)
 logger.addHandler(fh)
 
 logging.info("main logging statrted")
-
+from importlib import import_module
+from Adafruit_IO import Client, Feed, Data 
 import constants
- 
+import os
+cwd = os.getcwd()
+configMod = import_module("config")
+def main():
+  logging.info("main started")
+  aio = Client(constants.USERNAME, constants.AIO_KEY)
+  while True:
+    d = aio.receive('ldr')
+    data = (d.value)
+    print(data)
+    if(data == 1):
+      print("1")
+    elif(data == 17):
+      print("17")
+
+main()
