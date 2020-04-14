@@ -18,6 +18,7 @@ configMod = import_module("config")
 def main():
   logging.info("main started")
   aio = Client(constants.USERNAME, constants.AIO_KEY)
+  aio.send('ldr', 0)
   while True:
     d = aio.receive('ldr')
     data = (d.value)
