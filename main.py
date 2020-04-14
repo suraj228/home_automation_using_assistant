@@ -23,7 +23,9 @@ def main():
     d = aio.receive('ldr')
     data = (d.value)
     print(data)
-    if(data == 1):
+    if(data == 0):
+      print(0)
+    elif(data == 1):
       print("1")
     elif(data == 17):
       print("17")
