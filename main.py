@@ -4,9 +4,7 @@ import logging
 from importlib import import_module
 from Adafruit_IO import Client, Feed, Data 
 import constants
-import os
-cwd = os.getcwd()
-configMod = import_module("config")
+import config as cfg
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
@@ -40,6 +38,7 @@ def main():
         continue
     print(data)
     if(data == 0):
+      
       print(0)
       continue
     elif(data == 1):
