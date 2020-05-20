@@ -10,8 +10,6 @@ def initPi():
 		global pi, pigpio
 		pigpio = __import__("pigpio")
 		pi = pigpio.pi()
+		return pi
 	except Exception as e:
 		logging.error("initPi errror: %s", e)
-
-initPi()
-print(pi)

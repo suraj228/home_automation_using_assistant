@@ -27,3 +27,7 @@ def getConfig(obj = None, attr = None):
             return CONFIG[obj]
     except:
         logging.error("Failed to get config")
+
+pwd = os.getcwd()
+
+readConfig(pwd+ "/config.json")
